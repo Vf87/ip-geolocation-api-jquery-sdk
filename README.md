@@ -1,45 +1,91 @@
 # IP Geolocation API JQuery SDK
 
-## Introduction
+## Overview
+The official **JQuery Library/SDK** for **[IPGeolocation.io](https://ipgeolocation.io)**'s set of APIs, provides a quick, developer friendly, way to access IP Location, threat intelligence, Timezone, Astronomy, ASN, Abuse Contact, and user-agent data. Lookup your own IP or provide any IPv4, IPv6 or domain name to get structured results in jquery, without the need for manual HTTP handling.
 
-[IPGeolocation API](https://ipgeolocation.io) is the solution to identify country code (ISO2 and ISO3 standard), country name, continent code, continent name, country capital, state/province, district, city, zip code, latitude and longitude of city, is country belongs to Europian Union, calling code, top level domain (TLD), languages, country flag, internet service provider (ISP), connection type, organization, geoname ID, currency code, currency name, time zone ID, time zone offset, current time in the time zone, is time zone in daylight saving time, and total daylight savings. This document provides important information to help you get up to speed with IPGeolocation API using IP Geolocation API JQuery SDK.
+- [IP Location API](https://ipgeolocation.io/ip-location-api.html): Get all-in-one unified solution for **location** (city, locality, state, country, etc.), **currency**, **network** (AS number, ASN name, organization, asn type, date of allocation, company/ISP name, company type, company domain), **timezone** , **useragent** string parsing, **security** (threat score, is_tor, is_bot, proxy_provider, cloud_provider), and **abuse contact** (route/CIDR network, country, address, email, phone numbers) information.
+- [IP Security API](https://ipgeolocation.io/ip-security-api.html): Get security, network, location, hostname, timezone and useragent parsing.
+- [ASN API](https://ipgeolocation.io/asn-api.html): Get ASN details along with peers, upstreams, downstreams, routes, and raw WHOIS.
+- [Abuse Contact API](https://ipgeolocation.io/ip-abuse-contact-api.html): Get abuse emails, phone numbers, kind, organization, route/CIDR network and country.
+- [Astronomy API](https://ipgeolocation.io/astronomy-api.html): Get sunrise, sunset, moonrise, moonset, moon phases with precise twilight period times in combination with location information.
+- [Timezone API](https://ipgeolocation.io/timezone-api.html): Get timezone name, multiple time formats, daylight saving status and its details along with location information.
+- [Timezone Convert API](https://ipgeolocation.io/timezone-api.html): Convert time between timezone names, geo coordinates, location addresses, IATA codes, ICAO codes, or UN/LOCODE.
+- [User Agent API](https://ipgeolocation.io/user-agent-api.html): Get browser, Operating System, and device info from single or multiple Useragent string parsing.
 
-**Note:** This SDK is compatible with Vanilla JS and doesn't require JQuery as we have dropped the JQuery dependencies from v1.1.2 in this SDK.
+This library aims to empower developers to integrate threat intelligence, personalization, fraud prevention, compliance, and analytics features directly into web based applications. Whether you're enriching signup forms with ip geolocation data, localizing content, embedding threat intelligence in back-end systems, or converting time zones and currencies, the library ensures seamless, scalable integration with IPGeolocation.io's global API infrastructure.
 
-Developers can use this JQuery SDK for software and web projects related to, but not limited to:
+Based on:
+- API version: 1.0
 
-1. Display native language and currency
-2. Redirect based on the country
-3. Digital rights management
-4. Web log stats and analysis
-5. Auto-selection of country, state/province and city on forms
-6. Filter access from countries you do not do business with
-7. Geo-targeting for increased sales and click-through
+> [!IMPORTANT]
+> We recommend using our [Javascript SDK](https://ipgeolocation.io/documentation/ip-geolocation-api-javascript-sdk.html) instead. That is based upon API v2.0.
 
-## Quick Start Guide
+**Official Release:**
+- Available on [![npm version](https://img.shields.io/npm/v/ip-geolocation-api-jquery-sdk?color=brightgreen)](https://www.npmjs.com/package/ip-geolocation-api-jquery-sdk)
+- Source Code: [**GitHub Repository**](https://github.com/IPGeolocation/ip-geolocation-api-jquery-sdk)
 
-You need a valid 'IPGeolocation API key' to use this SDK. [Sign up](https://ipgeolocation.io/signup) here and get your free API key if you don't have one.
+## Table of Contents
+1. [Requirements](#requirements)
+2. [Installation](#installation)
+3. [API Plan Tiers and Documentation](#api-plan-tiers-and-documentation)
+4. [Authentication Setup](#authentication-setup)
+    - [How to Get Your API Key](#how-to-get-your-api-key)
+    - [ApiKeyAuth](#apikeyauth)
+5. [IP Geolocation Lookup Examples](#ip-geolocation-lookup-examples)
+6. [Time Zone API Lookup Examples](#time-zone-api-lookup-examples)
+7. [User Agent API Lookup Examples](#user-agent-api-lookup-examples)
+8. [Practical use case](#practical-use-case)
+9. [Supported Languages](#supported-languages)
 
-**Note:** Complete documentation to use this SDK is also available at [IP Geolocation API JQuery SDK Documentation](https://ipgeolocation.io/documentation/ip-geolocation-api-jquery-sdk.html).
+## Requirements
+- NPM or Yarm Package manager
+- API Key from [IPGeolocation.io](https://ipgeolocation.io)
 
-## System Requirements  
-
-Internet connection is required to run this component.
-
-## Documentation
-Use the following URL to visit documentation
-[https://ipgeolocation.io/documentation.html](https://ipgeolocation.io/documentation.html)
 
 ## Installation
 ### CDN Link
-
 Add the following script in your HTML page:
-
 ```html
 <script src="https://cdn.jsdelivr.net/npm/ip-geolocation-api-jquery-sdk@1.1.4/ipgeolocation.min.js"></script>
 ```
 
-## Geolocation Lookup
+> [!NOTE] 
+> This SDK is compatible with Vanilla JS and doesn't require JQuery as we have dropped the JQuery dependencies from v1.1.2 in this SDK.
+
+## API Plan Tiers and Documentation
+
+The documentation below corresponds to the four available API tier plans:
+
+- **Developer Plan** (Free): [Full Documentation](https://ipgeolocation.io/ip-location-api.html#Free)
+- **Standard Plan**: [Full Documentation](https://ipgeolocation.io/ip-location-api.html#Standard)
+- **Advance Plan**: [Full Documentation](https://ipgeolocation.io/ip-location-api.html#Advance)
+- **Security Plan**: [Full Documentation](https://ipgeolocation.io/ip-security-api.html#documentation-overview)
+
+For a detailed comparison of what each plan offers, visit the [Pricing Page](https://ipgeolocation.io/pricing.html).
+
+## Authentication Setup
+To authenticate API requests, you'll need an API key from [ipgeolocation.io](https://ipgeolocation.io).
+
+### How to Get Your API Key
+
+1. **Sign up** here: [https://app.ipgeolocation.io/signup](https://app.ipgeolocation.io/signup)
+2. **(optional)** Verify your email, if you signed up using email.
+3. **Log in** to your account: [https://app.ipgeolocation.io/login](https://app.ipgeolocation.io/login)
+4. After logging in, navigate to your **Dashboard** to find your API key: [https://app.ipgeolocation.io/dashboard](https://app.ipgeolocation.io/dashboard)
+
+<a id="ApiKeyAuth"></a>
+### ApiKeyAuth
+
+Once you have the key, you can use it as follows:
+```javascript
+function handleResponse(response) {
+    console.log(response);
+}
+
+_ipgeolocation.getGeolocation(handleResponse, "YOUR_API_KEY");
+```
+
+## IP Geolocation Lookup Examples
 
 You can use this SDK without an API key if you're using the _Request Origin_ feaure on IP Geolocation API.  
 Here are a few different ways of querying Geolocation for an IP address from IP Geolocation API.
@@ -88,7 +134,7 @@ _ipgeolocation.includeSecurity(true);
 _ipgeolocation.includeUserAgent(true);
 _ipgeolocation.getGeolocation(handleResponse, "YOUR_API_KEY");
 ```
-## Time Zone API
+## Time Zone API Lookup Examples
 
 Here are a few examples to query Time Zone information from Timezone API.
 
@@ -129,9 +175,9 @@ _ipgeolocation.setLocation("Amman, Jordan");
 _ipgeolocation.getTimezone(handleResponse, "YOUR_API_KEY");
 ```
 
-## Time Zone API
+## User Agent API Lookup Examples
 
-Here are a few examples to query Time Zone information from Timezone API.
+Here are a few examples to parse the user-agent information from User Agent API.
 
 ```javascript
 // Function to handle the response from IP Geolocation API.
@@ -150,11 +196,11 @@ _ipgeolocation.makeAsyncCallsToAPI(false);
 _ipgeolocation.getUserAgent(handleResponse, "YOUR_API_KEY");
 ```
 
-## Example
+## Practical use case
 
 Here is a sample code to use IP Geolocation API using JQuery SDK:
 
-```javascript
+```html
 <script src="https://cdn.jsdelivr.net/npm/ip-geolocation-api-jquery-sdk@1.1.4/ipgeolocation.min.js"></script>
 
 <script>
@@ -182,8 +228,8 @@ Here is a sample code to use IP Geolocation API using JQuery SDK:
     });
 </script>
 ```
-
-** IPGeolocation provides geolocation information in the following languages:
+## Supported Languages
+IPGeolocation provides geolocation information in the following languages:
 * English (en)
 * German (de)
 * Russian (ru)
