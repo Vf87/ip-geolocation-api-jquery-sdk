@@ -18,7 +18,7 @@ Based on:
 - API version: 1.0
 
 > [!IMPORTANT]
-> We recommend using our [Javascript SDK](https://ipgeolocation.io/documentation/ip-geolocation-api-javascript-sdk.html) instead. That is based upon API v2.0.
+> We recommend using our [JavaScript SDK](https://ipgeolocation.io/documentation/ip-geolocation-api-javascript-sdk.html) instead. That is based upon API v2.0.
 
 **Official Release:**
 - Available on [![npm version](https://img.shields.io/npm/v/ip-geolocation-api-jquery-sdk?color=brightgreen)](https://www.npmjs.com/package/ip-geolocation-api-jquery-sdk)
@@ -27,7 +27,7 @@ Based on:
 ## Table of Contents
 1. [Requirements](#requirements)
 2. [Installation](#installation)
-3. [API Plan Tiers and Documentation](#api-plan-tiers-and-documentation)
+3. [API Documentation Links](#api-documentations)
 4. [Authentication Setup](#authentication-setup)
     - [How to Get Your API Key](#how-to-get-your-api-key)
     - [ApiKeyAuth](#apikeyauth)
@@ -52,14 +52,17 @@ Add the following script in your HTML page:
 > [!NOTE] 
 > This SDK is compatible with Vanilla JS and doesn't require JQuery as we have dropped the JQuery dependencies from v1.1.2 in this SDK.
 
-## API Plan Tiers and Documentation
+## API Documentations
 
-The documentation below corresponds to the four available API tier plans:
-
-- **Developer Plan** (Free): [Full Documentation](https://ipgeolocation.io/ip-location-api.html#Free)
-- **Standard Plan**: [Full Documentation](https://ipgeolocation.io/ip-location-api.html#Standard)
-- **Advance Plan**: [Full Documentation](https://ipgeolocation.io/ip-location-api.html#Advance)
-- **Security Plan**: [Full Documentation](https://ipgeolocation.io/ip-security-api.html#documentation-overview)
+The documentation below corresponds to the available APIs:
+- [**Overview**](https://ipgeolocation.io/documentation.html)
+- [**IP GeoLocation API**](https://ipgeolocation.io/documentation/ip-location-api.html)
+- [**IP Security API**](https://ipgeolocation.io/documentation/ip-security-api.html)
+- [**ASN API**](https://ipgeolocation.io/documentation/asn-api.html)
+- [**IP Abuse Contact API**](https://ipgeolocation.io/documentation/ip-abuse-contact-api.html)
+- [**Timezone API**](https://ipgeolocation.io/documentation/timezone-api.html)
+- [**User-Agent API**](https://ipgeolocation.io/documentation/user-agent-api.html)
+- [**Astronomy API**](https://ipgeolocation.io/documentation/astronomy-api.html)
 
 For a detailed comparison of what each plan offers, visit the [Pricing Page](https://ipgeolocation.io/pricing.html).
 
